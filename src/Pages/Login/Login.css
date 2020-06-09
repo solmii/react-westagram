@@ -1,0 +1,112 @@
+/* login container */
+.login_container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* login form */
+.login_form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+/* login form - logo */
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 175px;
+  margin: 32px 0 30px 0;
+}
+
+/* login form - input */
+.login_input {
+  width: 268px;
+  padding: 12px 0 11px 8px;
+  margin-bottom: 6px;
+  color: #262626;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 1.2em;
+}
+
+/* login form - button */
+.login_button {
+  width: 268px;
+  height: 30px;
+  margin: 8px 40px;
+  color: #fff;
+  background-color: #0095f6;
+  opacity: 30%;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* login form - or */
+.or_form {
+  width: 268px;
+  height: 15px;
+  margin: 10px 40px 18px;
+  display: flex;
+  align-items: center;
+}
+
+.or_line {
+  width: 104.75px;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.or_form p {
+  margin: 0 18px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #8e8e8e;
+}
+
+/* login form - facebook login */
+.facebook_login {
+  margin: 10px 0 20px 0;
+}
+
+.facebook_login a {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #385185;
+}
+
+.facebook_login img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+/* login form - forgot pw */
+.forgot_pw {
+  margin-bottom: 20px;
+}
+
+.forgot_pw a {
+  font-size: 1.2em;
+  color: #00376b;
+}
+
+/* link event - click opacity 0.5
+.link_event_opacity {
+  opacity: 0.5;
+} */
