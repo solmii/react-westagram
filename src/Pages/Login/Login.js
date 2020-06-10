@@ -1,19 +1,41 @@
 import React from 'react';
-import logo from '../../Images/logo_text.png';
-import facebook from '../../Images/Login/facebook.png';
 import './Login.css';
 
 class Login extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      userId: '',
+      userPw: '',
+    };
+  }
+
+  changeIdHandler = (e) => {
+    this.setState({
+      userId: e.target.value,
+    });
+  };
+
+  changePwHandler = (e) => {
+    this.setState({
+      userPw: e.target.value,
+    });
+  };
+
+  clickHandler = () => {
+    console.log(this.state);
+  };
+
   render() {
     return (
       <section className='login_container'>
         <div className='login_form'>
           <div className='logo'>
-            <img alt='westagram' src={logo} />
+            <img alt='westagram' src={require('../../Images/logo_text.png')} />
           </div>
-          <input className='login_input' type='text' placeholder='전화번호, 사용자 이름 또는 이메일' autocomplete='”off”' />
-          <input className='login_input' type='password' placeholder='비밀번호' />
-          <button className='login_button' disabledYype='true'>
+          <input className='login_input' onChange={this.changeIdHandler} type='text' placeholder='전화번호, 사용자 이름 또는 이메일' />
+          <input className='login_input' onChange={this.changePwHandler} type='password' placeholder='비밀번호' />
+          <button className={this.state.userPw.length > 4 && this.state.userId.includes('@') ? 'login_button_abled' : 'login_button_disabled'} onClick={this.clickHandler} type='button'>
             로그인
           </button>
           <div className='or_form'>
@@ -22,8 +44,8 @@ class Login extends React.Component {
             <div className='or_line' />
           </div>
           <div className='facebook_login'>
-            <a href='#'>
-              <img src={facebook} />
+            <a href=''>
+              <img src={require('../../Images/Login/facebook.png')} />
               Facebook으로 로그인
             </a>
           </div>
@@ -38,5 +60,4 @@ class Login extends React.Component {
   }
 }
 
-// export 해서 내보내야 다른데서 쓸 수 있다!
 export default Login;

@@ -1,4 +1,5 @@
 import React from 'react';
+import feedLogList from '../../Components/feedLogList';
 import './Main.css';
 
 class Article extends React.Component {
@@ -6,18 +7,8 @@ class Article extends React.Component {
     return (
       <section className='feeds_container'>
         <div className='feed_log'>
-          <div className='feed_log_list'>
-            <a href='#'>
-              <img src={require('../../Images/Main/feed_log_img1.jpg')} />
-              <p className='feed_log_name'>User1</p>
-            </a>
-          </div>
-          <div className='feed_log_list'>
-            <a href='#'>
-              <img src={require('../../Images/Main/feed_log_img2.jpg')} />
-              <p className='feed_log_name'>User2</p>
-            </a>
-          </div>
+          <feedLogList user='Anna' />
+          <feedLogList user='Becky' />
         </div>
 
         <div className='feed'>
@@ -124,7 +115,7 @@ class Article extends React.Component {
           </div>
 
           <div className='upload_comment'>
-            <textarea placeholder='댓글 달기...' autocomplete='off' autocorrect='off' />
+            <textarea placeholder='댓글 달기...' />
             <button className='comment_btn'>게시</button>
           </div>
         </div>

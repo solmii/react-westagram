@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Styles/Common.css';
-import Login from './Pages/Login/Login'; // 확장자명이 없으면 자동으로 .js로 인식함
+import Login from './Pages/Login/Login';
 import Main from './Pages/Main/Main';
 import * as serviceWorker from './serviceWorker';
 

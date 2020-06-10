@@ -1,5 +1,5 @@
 import React from 'react';
-import FollowProfile from '../../Components/follow_profile';
+import FollowProfile from '../../Components/FollowProfile';
 import './Main.css';
 
 class Aside extends React.Component {
