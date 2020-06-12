@@ -1,14 +1,23 @@
 import React from 'react';
-import feedLogList from '../../Components/feedLogList';
+import Uploadcomment from '../../Components/Uploadcomment';
+import FeedLogList from '../../Components/FeedLogList';
 import './Main.css';
 
 class Article extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      userId: 'Wecoder',
+      comment: '',
+    };
+  }
+
   render() {
     return (
       <section className='feeds_container'>
         <div className='feed_log'>
-          <feedLogList user='Anna' />
-          <feedLogList user='Becky' />
+          <FeedLogList url={require('../../Images/Main/feed_log_img1.jpg')} user='Anna' />
+          <FeedLogList url={require('../../Images/Main/feed_log_img2.jpg')} user='Becky' />
         </div>
 
         <div className='feed'>
@@ -88,35 +97,7 @@ class Article extends React.Component {
               <a href='#'>댓글 4개 모두 보기</a>
             </div>
 
-            <div className='comments'>
-              <div className='comment_form'>
-                <a className='comment_id' href=''>
-                  User1
-                </a>
-                <a className='comment_tag' href=''>
-                  @solmii_dev
-                </a>
-                <span>치킨이,,,참,,,맛있겠읍니다,,,@>->-</span>
-              </div>
-              <div className='comment_form'>
-                <a className='comment_id' href=''>
-                  User2
-                </a>
-                <span>🔥코딩 화이팅!!</span>
-                <a className='comment_tag' href=''>
-                  @wecode_bootcamp
-                </a>
-                <span>에서!</span>
-              </div>
-            </div>
-            <div className='comment_day'>
-              <p>1일 전</p>
-            </div>
-          </div>
-
-          <div className='upload_comment'>
-            <textarea placeholder='댓글 달기...' />
-            <button className='comment_btn'>게시</button>
+            <Uploadcomment />
           </div>
         </div>
       </section>

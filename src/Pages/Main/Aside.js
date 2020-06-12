@@ -30,13 +30,9 @@ class Aside extends React.Component {
 
           <div className='follow'>
             <FollowProfile />
-
             <FollowProfile />
-
             <FollowProfile />
-
             <FollowProfile />
-
             <FollowProfile />
           </div>
 
