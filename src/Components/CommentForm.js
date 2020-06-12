@@ -1,4 +1,5 @@
 import React from 'react';
+import HeartBtn from './HeartBtn';
 import '../Pages/Main/Main.css';
 
 class CommentForm extends React.Component {
@@ -15,6 +16,9 @@ class CommentForm extends React.Component {
           {this.props.tag}
         </a>
         <span>{this.props.comment}</span>
+        <div className='comment_like'>
+          <HeartBtn width='12' height='12' />
+        </div>
       </div>
     );
   }

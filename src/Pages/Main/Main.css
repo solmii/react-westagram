@@ -227,15 +227,30 @@ main {
 
 .feed_icons ul {
   padding: 0;
+  display: flex;
 }
 
 .feed_icons li {
   list-style: none;
+  padding-right: 14px;
 }
 
 .feed_icons img {
-  width: 24px;
-  margin-right: 8px;
+  width: 28px;
+  height: 25px;
+}
+
+.feed_icons button {
+  cursor: pointer;
+}
+
+/* feed_icon - heart button (클릭할 때마다 색상 변경 */
+.off_button {
+  fill: #262626;
+}
+
+.on_button {
+  fill: #ed4956;
 }
 
 /* feed - feed_comments */
@@ -305,6 +320,13 @@ main {
   padding-left: 16px;
   margin-bottom: 3px;
   position: relative;
+}
+
+.comment_like {
+  display: inline;
+  position: absolute;
+  right: 32px;
+  top: 2px;
 }
 
 .comments {
