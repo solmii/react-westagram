@@ -8,10 +8,6 @@ import './Main.css';
 class Article extends React.Component {
   constructor() {
     super();
-    this.state = {
-      userId: 'Wecoder',
-      comment: '',
-    };
   }
 
   render() {
