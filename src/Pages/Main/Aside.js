@@ -1,6 +1,6 @@
 import React from 'react';
 import FollowProfile from '../../Components/FollowProfile';
-import './Main.css';
+import './Main.scss';
 
 class Aside extends React.Component {
   render() {

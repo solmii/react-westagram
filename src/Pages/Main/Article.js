@@ -3,7 +3,7 @@ import Uploadcomment from '../../Components/Uploadcomment';
 import FeedLogList from '../../Components/FeedLogList';
 import HeartBtn from '../../Components/HeartBtn';
 import FeedBtn from '../../Components/FeedBtn';
-import './Main.css';
+import './Main.scss';
 
 class Article extends React.Component {
   constructor() {
@@ -33,6 +33,7 @@ class Article extends React.Component {
             </div>
             <button></button>
           </div>
+
           <div className='feed_img'>
             <img alt='wecode' src={require('../../Images/Main/feed_main.JPG')} />
           </div>
@@ -81,10 +82,6 @@ class Article extends React.Component {
                 </a>
                 짱👍
               </p>
-            </div>
-
-            <div className='more_comment'>
-              <a href='#'>댓글 4개 모두 보기</a>
             </div>
 
             <Uploadcomment />

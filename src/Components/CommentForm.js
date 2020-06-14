@@ -1,6 +1,6 @@
 import React from 'react';
 import HeartBtn from './HeartBtn';
-import '../Pages/Main/Main.css';
+import '../Pages/Main/Main.scss';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class CommentForm extends React.Component {
   }
   render() {
     return (
-      <div className='comment_form'>
+      <div className='comment_form' onMouseDown={this.props.onEvent} onMouseUp={this.props.offEvent} onMouseLeave={this.props.offEvent}>
         <a className='comment_id' href=''>
           {this.props.name}
         </a>

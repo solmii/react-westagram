@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../../Components/Nav.js';
 import Article from './Article';
 import Aside from './Aside';
-import './Main.css';
+import './Main.scss';
 
 class Main extends React.Component {
   render() {

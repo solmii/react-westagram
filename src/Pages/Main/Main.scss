@@ -29,39 +29,76 @@ main {
 }
 
 /* nav_bar - search_form */
-.search_form input {
-  width: 215px;
-  font-size: 1.3rem;
-  font-weight: 300;
-  text-align: center;
-  color: #8e8e8e;
-  padding: 5px 0;
+/* search_form 클릭 안했을때 */
+.search_form {
+  position: relative;
+  margin-left: 15%;
+  width: 200px;
   margin-right: 40px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
+
+  input {
+    width: 200px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    color: #8e8e8e;
+    padding: 5px 0;
+  }
+  .search_icon {
+    position: absolute;
+    width: 9px;
+    left: 74px;
+    top: 9px;
+    opacity: 0.6;
+  }
+
+  .cancel_icon {
+    display: none;
+  }
 }
 
-.search_form {
+/* search_form 클릭 했을때 */
+.search_form_click {
   position: relative;
   margin-left: 15%;
+  width: 200px;
+  margin-right: 40px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+
+  input {
+    width: 177px;
+    margin-left: 23px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .search_icon {
+    position: absolute;
+    width: 9px;
+    left: 8px;
+    top: 9px;
+    opacity: 0.6;
+  }
+
+  .cancel_icon {
+    position: absolute;
+    width: 14px;
+    right: 8px;
+    top: 6px;
+    opacity: 0.2;
+  }
 }
 
-.search_icon {
-  position: absolute;
-  width: 10px;
-  left: 82px;
-  top: 9px;
-  opacity: 0.6;
-}
-
-.cancel_icon {
+// 테스트
+.search_form_onblur .search_icon {
   display: none;
-  position: absolute;
-  width: 14px;
-  right: 8px;
-  top: 7px;
-  opacity: 0.3;
 }
 
 /* nav_bar - content_icons */
@@ -367,6 +404,7 @@ main {
   font-weight: bold;
   color: #0095f6;
   opacity: 0.3;
+  cursor: default;
 }
 
 .js-delBtn {

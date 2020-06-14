@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Pages/Main/Main.css';
+import '../Pages/Main/Main.scss';
 
 class FeedBtn extends React.Component {
   constructor(props) {

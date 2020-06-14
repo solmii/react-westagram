@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../Images/logo_text.png';
-import '../Pages/Main/Main.css';
+import SearchForm from './SearchForm';
+import '../Pages/Main/Main.scss';
 
 class Nav extends React.Component {
   render() {
@@ -8,14 +8,10 @@ class Nav extends React.Component {
       <nav className='nav_container'>
         <div className='nav_bar'>
           <div className='nav_logo'>
-            <img src={logo} />
+            <img src={require('../Images/logo_text.png')} />
           </div>
 
-          <div className='search_form'>
-            <img className='search_icon' src={require('../Images/Main/search.png')} />
-            <img className='cancel_icon' src={require('../Images/Main/cancel.png')} />
-            <input type='text' placeholder='검색' />
-          </div>
+          <SearchForm />
 
           <div className='content_icons'>
             <ul>
