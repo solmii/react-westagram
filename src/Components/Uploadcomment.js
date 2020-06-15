@@ -34,6 +34,8 @@ class Uploadcomment extends React.Component {
   // 댓글 삭제 기능 (handleButtonPress에 전달)
   commentRemoveHandler = (idx) => {
     console.log('test');
+    // this.state.commentArr
+    // 배열의 갯수를 idx로 접근해서? 원하는 순서에 있는 배열의 요소를 삭제한 담에 => setState
   };
 
   // 댓글 꾹 누르면 삭제

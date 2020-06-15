@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './Login.css';
 
 class Login extends React.Component {
@@ -24,6 +25,7 @@ class Login extends React.Component {
 
   clickHandler = () => {
     console.log(this.state);
+    this.props.history.push('/main');
   };
 
   render() {
@@ -60,4 +62,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
