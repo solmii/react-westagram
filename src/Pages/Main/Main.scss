@@ -289,7 +289,7 @@ main {
   cursor: pointer;
 }
 
-/* feed_icon - heart button (클릭할 때마다 색상 변경 */
+/* feed_icon - heart button (클릭할 때마다 색상 변경) */
 .off_button {
   fill: #262626;
   animation-name: btn1_animation;
@@ -452,11 +452,17 @@ main {
   cursor: default;
 }
 
-.js-delBtn {
-  position: absolute;
-  right: 22px;
+.del_Btn {
+  display: inline;
   font-size: 1.4rem;
   font-weight: bold;
+  cursor: pointer;
+  color: #0095f6;
+}
+
+.del_Btn button {
+  font-size: 1.2rem;
+  font-weight: 600;
   cursor: pointer;
   color: #0095f6;
 }

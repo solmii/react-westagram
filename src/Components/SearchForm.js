@@ -25,6 +25,7 @@ class SearchForm extends React.Component {
   searchInputRemoveHandler = () => {
     this.setState({
       searchInput: '',
+      searchClick: false,
     });
   };
   render() {
