@@ -14,8 +14,8 @@ class Article extends React.Component {
     return (
       <section className='feeds_container'>
         <div className='feed_log'>
-          <FeedLogList url={require('../../Images/Main/feed_log_img1.jpg')} user='Anna' />
-          <FeedLogList url={require('../../Images/Main/feed_log_img2.jpg')} user='Becky' />
+          <FeedLogList url={'https://ca.slack-edge.com/TH0U6FBTN-U011AUSAMED-e77e219111eb-512'} user='daehwiii' />
+          <FeedLogList url={'https://ca.slack-edge.com/TH0U6FBTN-U011AUS40D7-5cf4faa84d71-512'} user='gwang5' />
         </div>
 
         <div className='feed'>
