@@ -32,22 +32,21 @@ class Uploadcomment extends React.Component {
       this.addFormHandler();
     }
   };
-  // // 댓글 삭제 기능 (handleButtonPress에 전달)
-  // commentRemoveHandler = (commentArr) => {
-  //   this.setState({
-  //     commentArr: this.state.commentArr.filter((_, i) => commentArr[i] !== CommentForm.key),
-  //     commentCount: this.state.commentCount - 1,
-  //   });
-  // };
-
-  // // 댓글 꾹 누르면 삭제
-  // btnPressHandler() {
-  //   this.buttonPressTimer = setTimeout((i) => this.commentRemoveHandler(i), 1200);
-  // }
-  // // 댓글에서 마우스 떼면 reset time
-  // btnReleaseHandler() {
-  //   clearTimeout(this.buttonPressTimer);
-  // }
+  // 댓글 삭제 기능 (btnPressHandler에 전달)
+  commentRemove = (e) => {
+    this.setState({
+      commentArr: this.state.commentArr.filter((comment) => comment.index === e.terget.index),
+      commentCount: this.state.commentCount - 1,
+    });
+  };
+  // 댓글 꾹 누르면 삭제
+  btnPressHandler() {
+    this.buttonPressTimer = setTimeout((idx) => this.commentRemove(idx), 1200);
+  }
+  // 댓글에서 마우스 떼면 reset time
+  btnReleaseHandler() {
+    clearTimeout(this.buttonPressTimer);
+  }
   render() {
     console.log(this.state.commentArr);
     return (
@@ -57,10 +56,10 @@ class Uploadcomment extends React.Component {
         </div>
 
         <div className='comments'>
-          <CommentForm name='윤빛나라' tag='@solmii_dev' comment='치킨이,,,참,,,맛있겠읍니다,,,@>->-' />
+          <CommentForm name='kdg21' tag='@solmii_dev' comment='치킨이,,,참,,,맛있겠읍니다,,,@>->-' />
           <CommentForm name='dooreplay' tag='@wecode' comment='열코딩 화이팅!!' />
           {this.state.commentArr.map((userInput, idx) => (
-            <CommentForm key={idx} name='Wecoder' comment={userInput} />
+            <CommentForm name='Wecoder' comment={userInput} key={idx} index={idx} btnPressHandler={this.btnPressHandler} btnReleaseHandler={this.btnReleaseHandler} />
           ))}
         </div>
         <div className='comment_day'>
@@ -78,5 +77,3 @@ class Uploadcomment extends React.Component {
   }
 }
 export default Uploadcomment;
-
-// onEvent={this.btnPressHandler} offEvent={this.btnReleaseHandler} - CommentForm에 삭제 이벤트

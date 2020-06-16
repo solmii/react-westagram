@@ -15,7 +15,9 @@ class CommentForm extends React.Component {
         <a className='comment_tag' href=''>
           {this.props.tag}
         </a>
-        <span>{this.props.comment}</span>
+        <span onMouseDown={this.props.btnPressHandler} onMouseUp={this.props.btnReleaseHandler} onMouseLeave={this.props.btnReleaseHandler}>
+          {this.props.comment}
+        </span>
         <div className='comment_like'>
           <HeartBtn width='12' height='12' />
         </div>
@@ -24,5 +26,3 @@ class CommentForm extends React.Component {
   }
 }
 export default CommentForm;
-
-// onMouseDown={this.props.onEvent} onMouseUp={this.props.offEvent} onMouseLeave={this.props.offEvent} - 삭제 이벤트
