@@ -83,7 +83,6 @@ class Article extends React.Component {
                 짱👍
               </p>
             </div>
-
             <Uploadcomment />
           </div>
         </div>

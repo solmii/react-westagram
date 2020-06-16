@@ -29,11 +29,11 @@ class Aside extends React.Component {
           </div>
 
           <div className='follow'>
-            <FollowProfile />
-            <FollowProfile />
-            <FollowProfile />
-            <FollowProfile />
-            <FollowProfile />
+            <FollowProfile img='https://ca.slack-edge.com/TH0U6FBTN-U011AUSB0F3-08311e7f4074-512' alt='sumin' name='who_stephHan' follow='회원님을 팔로우합니다' />
+            <FollowProfile img={'https://ca.slack-edge.com/TH0U6FBTN-U011AUS7533-265849714a79-512'} art={'yongin'} name={'yongineer1990'} follow={'회원님을 팔로우합니다'} />
+            <FollowProfile img={'https://ca.slack-edge.com/TH0U6FBTN-U011AUSAMED-e77e219111eb-512'} art={'daehwi'} name={'daehwiii'} follow={'kdg21님 외 523명이 팔로우합니다'} />
+            <FollowProfile img={'https://ca.slack-edge.com/TH0U6FBTN-U011AUS40D7-5cf4faa84d71-512'} art={'gwangoh'} name={'gwang5'} follow={'회원님을 팔로우합니다'} />
+            <FollowProfile img={'https://ca.slack-edge.com/TH0U6FBTN-U011AUS5BEV-db2c02c328d0-512'} art={'donggeon'} name={'kdg21'} follow={'회원님을 팔로우합니다'} />
           </div>
 
           <div className='footer_info'>

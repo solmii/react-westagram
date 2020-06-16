@@ -8,7 +8,7 @@ class CommentForm extends React.Component {
   }
   render() {
     return (
-      <div className='comment_form' onMouseDown={this.props.onEvent} onMouseUp={this.props.offEvent} onMouseLeave={this.props.offEvent}>
+      <div className='comment_form'>
         <a className='comment_id' href=''>
           {this.props.name}
         </a>
@@ -24,3 +24,5 @@ class CommentForm extends React.Component {
   }
 }
 export default CommentForm;
+
+// onMouseDown={this.props.onEvent} onMouseUp={this.props.offEvent} onMouseLeave={this.props.offEvent} - 삭제 이벤트

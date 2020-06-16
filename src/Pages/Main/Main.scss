@@ -34,7 +34,6 @@ main {
 
   button {
     display: flex;
-    color: red;
     cursor: default;
   }
 
@@ -276,7 +275,9 @@ main {
 
 .feed_icons li {
   list-style: none;
-  padding-right: 14px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .feed_icons img {
@@ -291,10 +292,47 @@ main {
 /* feed_icon - heart button (클릭할 때마다 색상 변경 */
 .off_button {
   fill: #262626;
+  animation-name: btn1_animation;
+  animation-duration: 0.25s;
+}
+@keyframes btn1_animation {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 125%;
+    height: 125%;
+    margin-left: -12.5%;
+    margin-top: -12.5%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .on_button {
   fill: #ed4956;
+  animation-name: btn2_animation;
+  animation-duration: 0.25s;
+}
+
+@keyframes btn2_animation {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 125%;
+    height: 125%;
+    margin-left: -12.5%;
+    margin-top: -12.5%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* feed - feed_comments */

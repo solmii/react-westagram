@@ -28,7 +28,6 @@ class SearchForm extends React.Component {
     });
   };
   render() {
-    console.log('포커스!! : ', this.state.searchClick);
     return (
       <div className='search_container' onFocus={this.searchOnHandler} onBlur={this.searchOffHandler}>
         <button onClick={this.searchInputRemoveHandler}>

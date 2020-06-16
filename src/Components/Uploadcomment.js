@@ -5,8 +5,9 @@ import '../Pages/Main/Main.scss';
 class Uploadcomment extends React.Component {
   constructor(props) {
     super(props);
-    this.btnPressHandler = this.btnPressHandler.bind(this);
-    this.btnReleaseHandler = this.btnReleaseHandler.bind(this);
+    // 댓글 삭제 이벤트
+    // this.btnPressHandler = this.btnPressHandler.bind(this);
+    // this.btnReleaseHandler = this.btnReleaseHandler.bind(this);
     this.state = {
       userInput: '',
       commentArr: [],
@@ -31,22 +32,24 @@ class Uploadcomment extends React.Component {
       this.addFormHandler();
     }
   };
-  // 댓글 삭제 기능 (handleButtonPress에 전달)
-  commentRemoveHandler = (idx) => {
-    console.log('test');
-    // this.state.commentArr
-    // 배열의 갯수를 idx로 접근해서? 원하는 순서에 있는 배열의 요소를 삭제한 담에 => setState
-  };
+  // // 댓글 삭제 기능 (handleButtonPress에 전달)
+  // commentRemoveHandler = (commentArr) => {
+  //   this.setState({
+  //     commentArr: this.state.commentArr.filter((_, i) => commentArr[i] !== CommentForm.key),
+  //     commentCount: this.state.commentCount - 1,
+  //   });
+  // };
 
-  // 댓글 꾹 누르면 삭제
-  btnPressHandler() {
-    this.buttonPressTimer = setTimeout(() => this.commentRemoveHandler(), 1200);
-  }
-  // 댓글에서 마우스 떼면 reset time
-  btnReleaseHandler() {
-    clearTimeout(this.buttonPressTimer);
-  }
+  // // 댓글 꾹 누르면 삭제
+  // btnPressHandler() {
+  //   this.buttonPressTimer = setTimeout((i) => this.commentRemoveHandler(i), 1200);
+  // }
+  // // 댓글에서 마우스 떼면 reset time
+  // btnReleaseHandler() {
+  //   clearTimeout(this.buttonPressTimer);
+  // }
   render() {
+    console.log(this.state.commentArr);
     return (
       <>
         <div className='more_comment'>
@@ -57,7 +60,7 @@ class Uploadcomment extends React.Component {
           <CommentForm name='윤빛나라' tag='@solmii_dev' comment='치킨이,,,참,,,맛있겠읍니다,,,@>->-' />
           <CommentForm name='dooreplay' tag='@wecode' comment='열코딩 화이팅!!' />
           {this.state.commentArr.map((userInput, idx) => (
-            <CommentForm key={idx} name='Wecoder' comment={userInput} onEvent={this.btnPressHandler} offEvent={this.btnReleaseHandler} />
+            <CommentForm key={idx} name='Wecoder' comment={userInput} />
           ))}
         </div>
         <div className='comment_day'>
@@ -75,3 +78,5 @@ class Uploadcomment extends React.Component {
   }
 }
 export default Uploadcomment;
+
+// onEvent={this.btnPressHandler} offEvent={this.btnReleaseHandler} - CommentForm에 삭제 이벤트
