@@ -15,9 +15,7 @@ class CommentForm extends React.Component {
         <a className='comment_tag' href=''>
           {this.props.tag}
         </a>
-        <span onMouseDown={this.props.btnPressHandler} onMouseUp={this.props.btnReleaseHandler} onMouseLeave={this.props.btnReleaseHandler}>
-          {this.props.comment}
-        </span>
+        <span onClick={() => this.props.commentDelHandler(this.props.index)}>{this.props.comment}</span>
         <div className='comment_like'>
           <HeartBtn width='12' height='12' />
         </div>

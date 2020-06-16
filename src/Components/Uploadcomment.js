@@ -32,8 +32,16 @@ class Uploadcomment extends React.Component {
       this.addFormHandler();
     }
   };
+  // 댓글 클릭시 댓글 삭제 이벤트
+  commentDelHandler = (index) => {
+    console.log(index);
+
+    this.setState({
+      commentArr: this.state.commentArr.filter((_, idx) => idx !== index),
+      commentCount: this.state.commentCount - 1,
+    });
+  };
   render() {
-    console.log(this.state.commentArr);
     return (
       <>
         <div className='more_comment'>
@@ -44,7 +52,7 @@ class Uploadcomment extends React.Component {
           <CommentForm name='kdg21' tag='@solmii_dev' comment='치킨이,,,참,,,맛있겠읍니다,,,@>->-' />
           <CommentForm name='dooreplay' tag='@wecode' comment='열코딩 화이팅!!' />
           {this.state.commentArr.map((userInput, idx) => (
-            <CommentForm name='Wecoder' comment={userInput} key={idx} index={idx} />
+            <CommentForm name='Wecoder' comment={userInput} key={idx} index={idx} commentDelHandler={this.commentDelHandler} />
           ))}
         </div>
         <div className='comment_day'>

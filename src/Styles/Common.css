@@ -19,7 +19,8 @@ input {
   all: unset;
 }
 
-button {
+button,
+svg {
   cursor: pointer;
 }
 
