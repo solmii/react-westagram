@@ -22,6 +22,16 @@ class Uploadcomment extends React.Component {
   };
   // 게시 버튼 클릭했을 때 댓글창 추가 이벤트
   addFormHandler = () => {
+    // 댓글 POST
+    fetch('http://10.58.7.42:8000/comment/', {
+      method: 'post',
+      headers: {
+        Authorization: localStorage.getItem('access_token'), // access_token을 백앤드한테 보내줌
+      },
+      body: JSON.stringify({
+        Comments: this.state.userInput, // userInput을 백앤드한테 보내줌
+      }),
+    });
     if (this.state.userInput) {
       this.setState({ commentArr: this.state.commentArr.concat(this.state.userInput), userInput: '', commentCount: this.state.commentCount + 1 });
     }

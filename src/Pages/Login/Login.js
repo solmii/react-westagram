@@ -24,9 +24,8 @@ class Login extends React.Component {
   };
 
   clickPostHandler = () => {
-    console.log(this.state);
     // POST
-    fetch('http://10.58.1.243:8000/Login/', {
+    fetch('http://10.58.7.42:8000/user/signin/', {
       method: 'post',
       body: JSON.stringify({
         user_id: this.state.userId,
@@ -36,7 +35,7 @@ class Login extends React.Component {
     })
       .then((res) => res.json()) // 로그인이 성공했다는 가정 하에 실행됨
       .then((res) => {
-        localStorage.setItem('access_token', res.Authorization);
+        localStorage.setItem('access_token', res.access_token);
         this.props.history.push('/main');
       });
   };
