@@ -23,9 +23,22 @@ class Login extends React.Component {
     });
   };
 
-  clickHandler = () => {
+  clickPostHandler = () => {
     console.log(this.state);
-    this.props.history.push('/main');
+    // POST
+    fetch('http://10.58.1.243:8000/Login/', {
+      method: 'post',
+      body: JSON.stringify({
+        user_id: this.state.userId,
+        password: this.state.userPw,
+        // account, password key 값은 백앤드와 소통해서 일치시켜야 한다.
+      }),
+    })
+      .then((res) => res.json()) // 로그인이 성공했다는 가정 하에 실행됨
+      .then((res) => {
+        localStorage.setItem('access_token', res.Authorization);
+        this.props.history.push('/main');
+      });
   };
 
   render() {
@@ -37,7 +50,7 @@ class Login extends React.Component {
           </div>
           <input className='login_input' onChange={this.changeIdHandler} type='text' placeholder='전화번호, 사용자 이름 또는 이메일' />
           <input className='login_input' onChange={this.changePwHandler} type='password' placeholder='비밀번호' />
-          <button className={this.state.userPw.length > 4 && this.state.userId.includes('@') ? 'login_button_abled' : 'login_button_disabled'} onClick={this.clickHandler} type='button'>
+          <button className={this.state.userPw.length > 4 && this.state.userId.includes('@') ? 'login_button_abled' : 'login_button_disabled'} onClick={this.clickPostHandler} type='button'>
             로그인
           </button>
           <div className='or_form'>
