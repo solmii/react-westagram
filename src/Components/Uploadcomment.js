@@ -22,7 +22,7 @@ class Uploadcomment extends React.Component {
   };
   // 게시 버튼 클릭했을 때 댓글창 추가 이벤트
   addFormHandler = () => {
-    // 댓글 POST
+    // 댓글 백앤드 서버로 POST (보내주기)
     fetch('http://10.58.7.42:8000/comment/', {
       method: 'post',
       headers: {
